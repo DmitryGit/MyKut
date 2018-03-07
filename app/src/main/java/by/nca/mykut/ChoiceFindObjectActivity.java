@@ -3,8 +3,10 @@ package by.nca.mykut;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.AlertDialog;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.CursorLoader;
+import android.content.DialogInterface;
 import android.content.Loader;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -21,6 +23,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -44,17 +47,57 @@ public class ChoiceFindObjectActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choice_find_object);
 
         // получаем элемент ListView
-        ListView countriesList = (ListView) findViewById(R.id.countriesList);
+        ListView choice_find_objectList = (ListView) findViewById(R.id.choice_find_objectList);
 
         // получаем ресурс
-        String[] countries = getResources().getStringArray(R.array.choice_find_object);
+        String[] choice_find_object = getResources().getStringArray(R.array.choice_find_object);
 
         // создаем адаптер
         ArrayAdapter<String> adapter = new ArrayAdapter(this,
-                android.R.layout.simple_list_item_1, countries);
+                android.R.layout.simple_list_item_1, choice_find_object);
 
         // устанавливаем для списка адаптер
-        countriesList.setAdapter(adapter);
+        choice_find_objectList.setAdapter(adapter);
+
+        choice_find_objectList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(ChoiceFindObjectActivity.this);
+                builder.setTitle("Важное сообщение!")
+                        .setMessage("Покормите кота!")
+                        .setIcon(R.drawable.ic_launcher_foreground)
+                        .setCancelable(false)
+                        .setNegativeButton("ОК, иду на кухню",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                    }
+                                });
+                AlertDialog alert = builder.create();
+                alert.show();
+
+            }
+
+//            @Override
+//            public void onClick(View view) {
+//                AlertDialog.Builder builder = new AlertDialog.Builder(ChoiceFindObjectActivity.this);
+//                builder.setTitle("Важное сообщение!")
+//                        .setMessage("Покормите кота!")
+//                        .setIcon(R.drawable.ic_launcher_foreground)
+//                        .setCancelable(false)
+//                        .setNegativeButton("ОК, иду на кухню",
+//                                new DialogInterface.OnClickListener() {
+//                                    public void onClick(DialogInterface dialog, int id) {
+//                                        dialog.cancel();
+//                                    }
+//                                });
+//                AlertDialog alert = builder.create();
+//                alert.show();
+//            }
+
+        });
+
+
     }
 }
 

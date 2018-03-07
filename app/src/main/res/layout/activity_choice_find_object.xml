@@ -37,37 +37,38 @@
                 android:src="@drawable/domiki" />
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:id="@+id/header"
                 android:layout_width="match_parent"
                 android:layout_marginTop="-20dp"
-                android:background="#0277BD"
+                android:background="#eceded"
+                android:layout_height="match_parent"
                 android:textAlignment="center">
 
                 <ListView
-                    android:id="@+id/countriesList"
+                    android:id="@+id/choice_find_objectList"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="200dp">
                 </ListView>
 
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:textAlignment="center"
-                    android:textColor="#fff"
-                    android:textSize="18sp"
-                    android:text="@string/entrance" />
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:textAlignment="center"
-                    android:textColor="#eee"
-                    android:textSize="18sp"
-                    android:text="@string/registration" />
+                <!--<TextView-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="#fff"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:text="@string/entrance" />-->
+                <!--<TextView-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="#eee"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:text="@string/registration" />-->
 
             </LinearLayout>
 
