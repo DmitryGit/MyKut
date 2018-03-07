@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Мой Кут</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password"> Пароль (необязательно)</string>
+    <string name="action_sign_in">Вход или регистрация</string>
+    <string name="action_sign_in_short">Вход</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">Это поле обязательно</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="entrance">Войти</string>
+    <string name="registration">Регистрация</string>
+
+
+    <string name="infoCNClick">Поиск по инвентарному номеру</string>
+    <string name="infoVLClick">Поиск по кадастровому номеру</string>
+    <string name="infoAddressClick">Поиск по адресу</string>
+    <!--<string name="registration">Регистрация</string>-->
+</resources>
